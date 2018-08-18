@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/design.css">
+</head>
+<body>
+<!-- 参考如下设计稿实现HTML页面及CSS样式：
+
+设计稿描述：
+
+设计稿分为头部，中间的Banner，主导航，内容区域，底部
+头部区域为100%宽的一个深色背景，头部中间有一块960px的定宽居中区域，里面包括了左边的Logo和右上角导航
+Banner为100%宽的区块，中间右下方有banner轮显的当前图片数字的示例，其中正在显示的图片对应的数字有特殊样式（注意不需要实现轮显banner的业务逻辑，只是按照设计稿做静态样式）
+主导航区域，有一个100%宽的灰色线条，线条之上，在中间960px区域是导航菜单，当前正在浏览页对应的菜单有特殊样式
+主要内容区域，宽度为960px，里面每个内容都有至少80px的padding，每一个内容的宽度均为自适应，可以使用flex布局 -->
+<header>
+    <div class="head clearfix">
+        <div class="logo">
+            <img src="" alt="" alt="Logo">LOGO
+        </div>
+        <ul class="navBar clearfix">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <div class="bannerImg">
+            <div class="img1">img1</div>
+            <div class="img2">img2</div>
+            <div class="img3">img3</div>
+            <div class="img4">img4</div>
+        </div>
+        <ul class="clearfix">
+            <li>1</li>
+            <li class="hover">2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>   
+      </div>
+</header>
+<section>
+    <div class="tab">
+        <ul class="clearfix">
+            <li class="hover">HOME</li>
+            <li>PROFILE</li>
+            <li>ABOUT</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="home">
+            <div class="first common">
+                <div>This is Content1</div>
+                <div>MayBe content2</div>
+                <div>content3</div>
+            </div>
+            <div class="second common">
+                <div>conten4</div>
+                <div>conten5</div>
+                <div>conten6</div>
+                <div>conten7</div>
+            </div>
+            <div class="third common">
+                <div>conten8</div>
+                <div>conten9</div>
+                <div>conten10</div>
+            </div>
+        </div>
+        <div class="profile"></div>
+        <div class="about"></div>
+    </div>
+</section>
+<footer>
+    <p>&copy;2018.ife.baidu.com</p>
+</footer>
+</body>
+</html>
