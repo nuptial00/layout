@@ -1,0 +1,179 @@
+    body{
+        margin:0;
+        padding:0;
+    }
+    .common{
+        /*height: 80px;*/
+        border-bottom:2px solid  #c0c0c0;
+        border-top:2px solid  #c0c0c0;
+        margin-bottom: 10px;
+    }
+    .left{
+        background: yellow;
+        height: 80px;
+    }
+    .right{
+        background: green;
+        height: 100px;
+    }
+    .main{
+        background: red;
+        height: 120px;
+    }
+    .clearfix:after{
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+    .first .left{
+        width: 30%;
+        float: left;
+    }
+    .first .right{
+        width: 70%;
+        float: right;
+    }
+    /*双inline-block*/
+    .secondOne{
+        font-size: 0;
+    }
+    .secondOne .left,.secondOne .right{
+        display: inline-block;
+        font-size: 15px;
+        vertical-align: top;
+    }
+    .secondOne .left{
+        width: 200px;
+    }
+    .secondOne .right{
+       width: calc(100% - 200px);
+    }
+    /*双FLoat方案*/
+   .secondTwo{
+        
+   }
+   .secondTwo .left, .secondTwo .right{
+        float: left;
+   }
+   .secondTwo .left{
+        width: 200px;
+   }
+   .secondTwo .right{
+        width: calc(100% - 200px);
+   }
+   /*float+margin-left方案*/
+   .secondThree{
+        
+        
+   }
+   .secondThree .left{
+        float: left;
+        width: 200px;
+         
+   }
+   .secondThree .right{
+         width: calc(100% - 200px);
+         margin-left: 200px;
+         
+   }
+   /*absolute+margin-left方案*/
+   .secondFour{
+        position: relative;
+   }
+   .secondFour .left{
+        position: absolute;
+        left: 0;
+        width: 200px;
+   }
+   .secondFour .right{
+         margin-left: 200px;
+         width: calc(100% - 200px);
+
+   }
+   /*float+BFC方案*/
+   .secondFive{
+        overflow: auto;
+   }
+   .secondFive .left{
+        float: left;
+        width: 200px;
+   }
+   .secondFive .right{
+        overflow: auto;
+   }
+   /*flex方案*/
+   .secondSix{
+        display: flex;
+   }
+   .secondSix .left{
+        width: 200px;
+        flex:0 0 auto;
+   }
+   .secondSix .right{
+        flex:1 1 0;
+   }
+   /*grid方案*/
+   .secondSeven{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+   }
+   .secondSeven .left{
+        grid-column: 1;
+   }
+   .secondSeven .right{
+        grid-column: 2;
+   }
+   /*实现一个两栏布局，右侧固定宽度，左侧根据浏览器宽度进行自适应变化*/
+   .third{
+
+   }
+   .third .left{
+       width: calc(100% - 200px);
+       float: left;
+   }
+   .third .right{
+        float: right;
+        width: 200px;
+   }
+   /*实现一个三栏布局，左侧固定宽度，右侧固定宽度，中间部分宽度随浏览器宽度变化而自适应变化*/
+   .four{
+       padding: 0 200px;
+   }
+   .four .main{
+       float: left;
+       width: 100%;
+   }
+   .four .left{
+       float: left;
+       width: 200px;
+       margin-left: -100%;
+       position: relative;
+       left: -200px;
+       
+   }
+   .four .right{
+       float: left;
+       width: 200px;
+       margin-left: -200px;
+       position: relative;
+       right: -200px;
+   }
+   /*实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化 */
+   .five{
+
+   }
+   .five .main{
+       float: left;
+       width: 200px;
+   }
+   .five .left{
+       float: left;
+       width: 200px;
+
+   }
+   .five .right{
+       float: left;
+       width: calc(100% - 400px);
+   }
